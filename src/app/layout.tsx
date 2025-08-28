@@ -9,12 +9,12 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "AzzFlow - Automatización de procesos y chatbots para WhatsApp",
+  title: "AzzFlow",
   description: "Automatización de procesos y chatbots para WhatsApp con AzzFlow. Chatbots que venden 24/7, automatización inteligente y asistentes virtuales para tu negocio.",
   keywords: "chatbots WhatsApp, automatización procesos, IA, inteligencia artificial, chatbot Argentina, automatización negocios",
   authors: [{ name: "AzzFlow" }],
   openGraph: {
-    title: "AzzFlow - Automatización de procesos y chatbots para WhatsApp",
+    title: "AzzFlow",
     description: "Automatizamos tu negocio con Inteligencia Artificial. Chatbots que venden por WhatsApp 24/7.",
     url: "https://azzflow.com",
     siteName: "AzzFlow",
