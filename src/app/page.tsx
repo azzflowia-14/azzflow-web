@@ -16,7 +16,7 @@ export default function Home() {
     setIsVisible(true);
   }, []);
 
-  const whatsappUrl = "https://wa.me/5493407496387";
+  const whatsappUrl = "https://wa.me/5493407510895";
 
   return (
     <div className="min-h-screen bg-white">
