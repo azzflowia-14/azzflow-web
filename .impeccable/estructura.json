@@ -1,0 +1,69 @@
+{
+  "title": "Estructura de la nueva web de AzzFlow",
+  "question": "Misma marca (blanco, carbón, azul #0048FF). Lo que cambia es cómo se cuenta la historia. Elegí una, o pedí otra tanda.",
+  "options": [
+    {
+      "id": "indice",
+      "label": "El índice de sistemas",
+      "kicker": "THE ROLL",
+      "lineage": "Changelogs y directorios tipo Linear / Vercel",
+      "thesis": "La web es un catálogo vivo: más de 20 sistemas en producción, numerados, y cada fila se abre con su captura real.",
+      "palette": ["#ffffff", "#212121", "#0048FF", "#f6f7f9"],
+      "materials": ["filas numeradas en mono", "capturas reales", "badge EN PRODUCCIÓN"],
+      "viewport": "Titular grande a la izquierda, a la derecha un mosaico de capturas de HR, Portofino y Guardiario; abajo arranca el índice 01, 02, 03… y el botón de WhatsApp siempre visible.",
+      "risk": "Si las filas quedan chatas parece un listado; necesita capturas buenas y una apertura de fila con ritmo.",
+      "wireframe": {"cols":12,"rows":12,"regions":[
+        {"label":"nav + WhatsApp","x":0,"y":0,"w":12,"h":1},
+        {"label":"titular + CTA","x":0,"y":1,"w":6,"h":4},
+        {"label":"mosaico de capturas","x":6,"y":1,"w":6,"h":4,"accent":true},
+        {"label":"01 AzzFlow HR (abierta, captura)","x":0,"y":5,"w":12,"h":3,"accent":true},
+        {"label":"02 Portofino","x":0,"y":8,"w":12,"h":1},
+        {"label":"03 Guardiario","x":0,"y":9,"w":12,"h":1},
+        {"label":"04…22 resto del índice","x":0,"y":10,"w":12,"h":1},
+        {"label":"socios + cierre azul","x":0,"y":11,"w":12,"h":1}
+      ]}
+    },
+    {
+      "id": "antes-despues",
+      "label": "De la planilla al sistema",
+      "lineage": "Comparativas antes / después de producto",
+      "thesis": "Cada caso arranca en el problema real (la planilla, el cuaderno, el WhatsApp) y termina en la pantalla del sistema que lo reemplazó.",
+      "palette": ["#ffffff", "#212121", "#0048FF", "#f6f7f9"],
+      "materials": ["planillas dibujadas", "capturas reales", "divisor antes/después"],
+      "viewport": "Titular 'Tu negocio ya no entra en una planilla' sobre una planilla que, al bajar, se transforma en la pantalla de un sistema.",
+      "risk": "La planilla dibujada tiene que verse creíble y sin caricatura, si no le resta seriedad.",
+      "wireframe": {"cols":12,"rows":12,"regions":[
+        {"label":"nav + WhatsApp","x":0,"y":0,"w":12,"h":1},
+        {"label":"titular","x":0,"y":1,"w":12,"h":2},
+        {"label":"planilla → sistema","x":1,"y":3,"w":10,"h":3,"accent":true},
+        {"label":"HR: antes","x":0,"y":6,"w":5,"h":2},
+        {"label":"HR: después (captura)","x":5,"y":6,"w":7,"h":2,"accent":true},
+        {"label":"Portofino: antes","x":0,"y":8,"w":5,"h":1},
+        {"label":"Portofino: después","x":5,"y":8,"w":7,"h":1,"accent":true},
+        {"label":"Guardiario","x":0,"y":9,"w":12,"h":1},
+        {"label":"cómo trabajamos + socios + cierre","x":0,"y":10,"w":12,"h":2}
+      ]}
+    },
+    {
+      "id": "vitrina-fija",
+      "label": "La vitrina que se queda fija",
+      "lineage": "Recorridos de producto con scroll fijo tipo Stripe / Apple",
+      "thesis": "Una pantalla grande queda fija mientras bajás; a la izquierda el relato de cada caso y a la derecha la captura cambia: HR, después Portofino, después Guardiario.",
+      "palette": ["#ffffff", "#212121", "#0048FF", "#f6f7f9"],
+      "materials": ["marco de navegador y celular", "capturas reales", "transiciones al hacer scroll"],
+      "viewport": "Titular y CTA arriba, y debajo una pantalla de sistema a casi todo el ancho que invita a bajar.",
+      "risk": "En celular el efecto fijo se pierde y se convierte en una lista de capturas apiladas.",
+      "wireframe": {"cols":12,"rows":12,"regions":[
+        {"label":"nav + WhatsApp","x":0,"y":0,"w":12,"h":1},
+        {"label":"titular + CTA","x":2,"y":1,"w":8,"h":2},
+        {"label":"pantalla grande de sistema","x":1,"y":3,"w":10,"h":3,"accent":true},
+        {"label":"relato caso 1, 2, 3","x":0,"y":6,"w":5,"h":4},
+        {"label":"captura fija que cambia","x":5,"y":6,"w":7,"h":4,"accent":true},
+        {"label":"resto de sistemas + socios + cierre","x":0,"y":10,"w":12,"h":2}
+      ]}
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": {"value": "code", "toggle": false}
+}

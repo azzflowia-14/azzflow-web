@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T14:00:00.000Z",
+  "title": "Design System: AzzFlow",
+  "extensions": {
+    "colorMeta": {
+      "electric": { "role": "primary", "displayName": "Azul Eléctrico AzzFlow", "canonical": "#0048ff", "tonalRamp": ["#001a66", "#002a99", "#0038cc", "#0048ff", "#3d74ff", "#7a9fff", "#b8caff", "#eef2ff"] },
+      "electric-deep": { "role": "primary", "displayName": "Azul Profundo", "canonical": "#0038cc", "tonalRamp": ["#00113d", "#001d66", "#002a99", "#0038cc", "#3360d6", "#6688e0", "#99b0eb", "#ccd7f5"] },
+      "electric-soft": { "role": "primary", "displayName": "Azul Niebla", "canonical": "#eef2ff", "tonalRamp": ["#1f2a4d", "#3a4c80", "#5c72b3", "#8ea3e0", "#b3c3f0", "#d9e2ff", "#e6ecff", "#eef2ff"] },
+      "on-electric-soft": { "role": "primary", "displayName": "Azul Lavanda", "canonical": "#d9e2ff", "tonalRamp": ["#1f2a4d", "#3a4c80", "#5c72b3", "#8ea3e0", "#b3c3f0", "#d9e2ff", "#e6ecff", "#f3f6ff"] },
+      "ink": { "role": "neutral", "displayName": "Carbón del Logo", "canonical": "#212121", "tonalRamp": ["#121212", "#212121", "#3a3a3a", "#575757", "#7a7a7a", "#a3a3a3", "#cccccc", "#f0f0f0"] },
+      "ink-soft": { "role": "neutral", "displayName": "Grafito", "canonical": "#575757", "tonalRamp": ["#121212", "#212121", "#3a3a3a", "#575757", "#7a7a7a", "#a3a3a3", "#cccccc", "#f0f0f0"] },
+      "paper": { "role": "neutral", "displayName": "Papel", "canonical": "#ffffff", "tonalRamp": ["#1d1f23", "#3b3f46", "#6b707a", "#9da2ab", "#c4c8d0", "#e6e8ec", "#f6f7f9", "#ffffff"] },
+      "paper-dim": { "role": "neutral", "displayName": "Papel Gris", "canonical": "#f6f7f9", "tonalRamp": ["#1d1f23", "#3b3f46", "#6b707a", "#9da2ab", "#c4c8d0", "#e6e8ec", "#f6f7f9", "#ffffff"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#e6e8ec", "tonalRamp": ["#1d1f23", "#3b3f46", "#6b707a", "#9da2ab", "#c4c8d0", "#e6e8ec", "#f6f7f9", "#ffffff"] },
+      "ok": { "role": "tertiary", "displayName": "Verde Producción", "canonical": "#0a7a3d", "tonalRamp": ["#032611", "#05401f", "#075a2d", "#0a7a3d", "#3a9a63", "#74ba92", "#b3dbc4", "#e7f6ed"] },
+      "ok-soft": { "role": "tertiary", "displayName": "Verde Producción Suave", "canonical": "#e7f6ed", "tonalRamp": ["#032611", "#05401f", "#075a2d", "#0a7a3d", "#3a9a63", "#74ba92", "#b3dbc4", "#e7f6ed"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Solo el titular del hero (y el del cierre a 2.25rem → 3.75rem)." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de sección, nombres de casos y nombres de socios." },
+      "title": { "displayName": "Title", "purpose": "Nombre de cada fila del índice (1.125rem) y de cada paso (1.25rem)." },
+      "body-lead": { "displayName": "Body lead", "purpose": "Bajadas de sección; 17px en el copy Antes./Ahora. de los casos." },
+      "body": { "displayName": "Body", "purpose": "Descripciones de filas, definiciones dd, ítems de checklist." },
+      "caption": { "displayName": "Caption", "purpose": "Leyendas bajo capturas, siempre en Archivo, nunca en mono." },
+      "data": { "displayName": "Data (mono)", "purpose": "Números de fila con cifras tabulares; misma familia para URL, conteos y teléfono." },
+      "label-status": { "displayName": "Label status (mono)", "purpose": "\"En producción\" en uppercase; rol/año de socios a 12px 0.1em." }
+    },
+    "shadows": [
+      { "name": "frame-browser", "value": "0 24px 48px -20px rgba(33,33,33,0.28), 0 2px 6px rgba(33,33,33,0.06)", "purpose": "Marco de navegador con captura real." },
+      { "name": "frame-phone", "value": "0 28px 44px -18px rgba(33,33,33,0.45)", "purpose": "Marco de celular; más profundo para flotar sobre el navegador." },
+      { "name": "cta-electric", "value": "0 8px 20px -8px rgba(0,72,255,0.6)", "purpose": "Botón primario de WhatsApp sobre papel." },
+      { "name": "cta-on-electric", "value": "0 12px 28px -10px rgba(0,0,0,0.35)", "purpose": "Botón blanco sobre la región azul de cierre." }
+    ],
+    "motion": [
+      { "name": "ease-entrada", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Curva del único momento de motion: la entrada del hero." },
+      { "name": "entrada", "value": "900ms; from opacity 0, translateY(18px) scale(0.985), blur(6px); delays 0 / 140-160 / 320ms", "purpose": "Las capturas del hero se asientan escalonadas una vez al cargar. Anulada con prefers-reduced-motion." },
+      { "name": "state-color", "value": "150ms color/background/border", "purpose": "Hover de botones, chips, links y filas del índice." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario (WhatsApp)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Único botón azul relleno; siempre lleva a WhatsApp.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.04 2c-5.46 0-9.9 4.44-9.92 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.44 9.92-9.9A9.83 9.83 0 0 0 19.05 4.9 9.83 9.83 0 0 0 12.04 2Z\"/></svg>Contanos tu problema</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--electric, #0048ff); color: #fff; padding: 14px 24px; border-radius: 8px; font-family: Archivo, system-ui, sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; box-shadow: 0 8px 20px -8px rgba(0,72,255,0.6); transition: background-color 150ms; } .ds-btn-primary:hover { background: var(--electric-deep, #0038cc); } .ds-btn-primary:focus-visible { outline: 2px solid var(--electric, #0048ff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botón secundario",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Papel con borde hairline; el borde pasa a carbón en hover.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Ver los sistemas</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; background: var(--paper, #fff); color: var(--ink, #212121); border: 1px solid var(--line, #e6e8ec); padding: 14px 24px; border-radius: 8px; font-family: Archivo, system-ui, sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; transition: border-color 150ms; } .ds-btn-secondary:hover { border-color: var(--ink, #212121); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--electric, #0048ff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip de rubro",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Filtro del índice; activo en relleno carbón, conteo en mono.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Todos</button><button class=\"ds-chip\" aria-pressed=\"false\">Distribución y logística <span class=\"ds-chip-n\">6</span></button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; flex-wrap: wrap; } .ds-chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line, #e6e8ec); background: var(--paper, #fff); color: var(--ink, #212121); border-radius: 9999px; padding: 8px 16px; font-family: Archivo, system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: border-color 150ms, background-color 150ms; } .ds-chip:hover { border-color: var(--ink, #212121); } .ds-chip[aria-pressed=\"true\"] { background: var(--ink, #212121); border-color: var(--ink, #212121); color: var(--paper, #fff); } .ds-chip:focus-visible { outline: 2px solid var(--electric, #0048ff); outline-offset: 2px; } .ds-chip-n { font-family: 'Chivo Mono', ui-monospace, monospace; font-size: 11px; opacity: 0.6; }"
+    },
+    {
+      "name": "Fila del índice",
+      "kind": "custom",
+      "refersTo": "indice-row",
+      "description": "Canaleta mono, nombre + ciudad, descripción, estado verde y Ver solo donde son verdad.",
+      "html": "<ol class=\"ds-indice\"><li class=\"ds-row\"><span class=\"ds-row-n\">04</span><div><h4 class=\"ds-row-t\">AzzFlow Stock</h4><p class=\"ds-row-m\">Industria · Ramallo</p></div><p class=\"ds-row-d\">Stock por depósito con movimientos auditados.</p><div class=\"ds-row-a\"><span class=\"ds-ok\"><span class=\"ds-ok-dot\"></span>En producción</span><a class=\"ds-ver\" href=\"#\">Ver <svg viewBox=\"0 0 16 16\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"M5 11L11 5M6 5h5v5\"/></svg></a></div></li></ol>",
+      "css": ".ds-indice { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink, #212121); font-family: Archivo, system-ui, sans-serif; } .ds-row { display: grid; grid-template-columns: 3rem 14rem 1fr auto; align-items: baseline; gap: 4px 24px; padding: 20px 8px; border-bottom: 1px solid var(--line, #e6e8ec); transition: background-color 150ms; } .ds-row:hover { background: var(--paper-dim, #f6f7f9); } .ds-row-n { font-family: 'Chivo Mono', ui-monospace, monospace; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--ink-soft, #575757); } .ds-row-t { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.025em; color: var(--ink, #212121); } .ds-row-m { margin: 2px 0 0; font-size: 13px; color: var(--ink-soft, #575757); } .ds-row-d { margin: 0; font-size: 15px; line-height: 1.625; color: var(--ink-soft, #575757); } .ds-row-a { display: flex; align-items: center; gap: 16px; justify-content: flex-end; } .ds-ok { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-family: 'Chivo Mono', ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ok, #0a7a3d); } .ds-ok-dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--ok, #0a7a3d); } .ds-ver { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: var(--electric, #0048ff); text-decoration: none; text-underline-offset: 4px; } .ds-ver:hover { text-decoration: underline; } .ds-ver:focus-visible { outline: 2px solid var(--electric, #0048ff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Marco de navegador",
+      "kind": "card",
+      "refersTo": "frame-browser",
+      "description": "Contenedor de capturas reales de escritorio, con URL en mono y sombra suave desplazada.",
+      "html": "<figure class=\"ds-browser\"><div class=\"ds-browser-bar\"><span class=\"ds-dots\"><i></i><i></i><i></i></span><span class=\"ds-url\">azzflow-hr.vercel.app</span><span style=\"width:34px\"></span></div><div class=\"ds-browser-screen\"></div></figure>",
+      "css": ".ds-browser { margin: 0; overflow: hidden; border: 1px solid var(--line, #e6e8ec); border-radius: 12px; background: var(--paper, #fff); box-shadow: 0 24px 48px -20px rgba(33,33,33,0.28), 0 2px 6px rgba(33,33,33,0.06); max-width: 520px; } .ds-browser-bar { display: flex; align-items: center; gap: 12px; height: 32px; padding: 0 12px; border-bottom: 1px solid var(--line, #e6e8ec); background: var(--paper-dim, #f6f7f9); } .ds-dots { display: flex; gap: 6px; } .ds-dots i { width: 8px; height: 8px; border-radius: 9999px; background: var(--line, #e6e8ec); } .ds-url { margin: 0 auto; padding: 2px 12px; border-radius: 6px; background: var(--paper, #fff); font-family: 'Chivo Mono', ui-monospace, monospace; font-size: 10px; color: var(--ink-soft, #575757); } .ds-browser-screen { aspect-ratio: 16 / 10; background: var(--paper-dim, #f6f7f9); }"
+    },
+    {
+      "name": "Marco de celular",
+      "kind": "card",
+      "refersTo": "frame-phone",
+      "description": "Bisel carbón de 5px para capturas móviles reales.",
+      "html": "<figure class=\"ds-phone\"><div class=\"ds-phone-screen\"></div></figure>",
+      "css": ".ds-phone { margin: 0; width: 160px; overflow: hidden; border: 5px solid var(--ink, #212121); border-radius: 22px; background: var(--ink, #212121); box-shadow: 0 28px 44px -18px rgba(33,33,33,0.45); } .ds-phone-screen { aspect-ratio: 390 / 700; border-radius: 17px; background: var(--paper-dim, #f6f7f9); }"
+    },
+    {
+      "name": "Paso numerado",
+      "kind": "custom",
+      "refersTo": "indice-row",
+      "description": "Pasos del proceso como filas del índice sobre papel gris; sin círculos.",
+      "html": "<ol class=\"ds-pasos\"><li><span class=\"ds-paso-n\">01</span><h3>Contanos el problema</h3><p>Por WhatsApp, como te salga.</p></li><li><span class=\"ds-paso-n\">02</span><h3>Propuesta concreta</h3><p>Qué hace, cuánto sale y cuánto tarda.</p></li></ol>",
+      "css": ".ds-pasos { list-style: none; margin: 0; padding: 0 0; background: var(--paper-dim, #f6f7f9); border-bottom: 1px solid rgba(33,33,33,0.15); font-family: Archivo, system-ui, sans-serif; } .ds-pasos li { display: grid; grid-template-columns: 3rem 18rem 1fr; align-items: baseline; gap: 4px 24px; padding: 24px 8px; border-top: 1px solid rgba(33,33,33,0.15); } .ds-paso-n { font-family: 'Chivo Mono', ui-monospace, monospace; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--ink-soft, #575757); } .ds-pasos h3 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.025em; color: var(--ink, #212121); } .ds-pasos p { margin: 0; font-size: 15px; line-height: 1.625; color: var(--ink-soft, #575757); }"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Barra fija de 64px con logo, links en grafito y CTA compacto.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-logo\">AzzFlow</span><nav><a href=\"#\">Sistemas</a><a href=\"#\">Cómo trabajamos</a><a href=\"#\">Nosotros</a><a class=\"ds-nav-cta\" href=\"#\">Escribinos</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line, #e6e8ec); font-family: Archivo, system-ui, sans-serif; } .ds-logo { font-size: 20px; font-weight: 800; letter-spacing: -0.025em; color: var(--ink, #212121); } .ds-nav nav { display: flex; align-items: center; gap: 28px; } .ds-nav nav a { font-size: 14px; font-weight: 500; color: var(--ink-soft, #575757); text-decoration: none; transition: color 150ms; } .ds-nav nav a:hover { color: var(--ink, #212121); } .ds-nav nav a.ds-nav-cta { background: var(--electric, #0048ff); color: #fff; padding: 8px 16px; border-radius: 8px; font-weight: 600; } .ds-nav nav a.ds-nav-cta:hover { background: var(--electric-deep, #0038cc); color: #fff; } .ds-nav a:focus-visible { outline: 2px solid var(--electric, #0048ff); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El índice de lo que ya está andando",
+    "overview": "Canon moderno de producto (referencia de craft: Linear / Vercel / Stripe), pinned por el usuario junto con la paleta de marca: blanco, carbón y azul eléctrico, solo modo claro. Dentro de ese canon, la página se organiza como un catálogo numerado: filas con número en mono, hairline de borde a borde y una regla de tinta que abre cada bloque. La expresión vive en titulares enormes de Archivo 800, en la precisión de la grilla y en pantallas reales de los sistemas dentro de marcos de navegador y celular.\n\nLa densidad es de índice, no de landing: filas y pares término/definición en vez de columnas iguales de cards. El azul no decora; marca la acción (CTA de WhatsApp) y se apodera de una región entera al cierre. El verde existe solo para decir que algo está en producción, y solo donde es verdad.\n\nHay un único momento de motion autoral: las capturas del hero se asientan escalonadas al cargar. El resto de la página está quieta.",
+    "keyCharacteristics": [
+      "Filas numeradas con canaleta mono, hairline #e6e8ec de borde a borde y regla de tinta arriba de cada sección.",
+      "Titulares Archivo 800 con tracking negativo; Chivo Mono solo para datos reales.",
+      "Capturas reales en marcos de navegador y celular con sombra suave desplazada.",
+      "Azul reservado para CTA, links y la región de cierre.",
+      "Un solo momento de motion: la entrada del hero."
+    ],
+    "rules": [
+      { "name": "The Azul Con Compromiso Rule", "body": "El azul va en la acción y en la región de cierre completa; no se usa como fondo de chips, badges ni círculos decorativos en el resto de la página.", "section": "colors" },
+      { "name": "The Verde Solo Si Es Verdad Rule", "body": "El punto verde y \"En producción\" aparecen únicamente en sistemas que están en producción hoy. Es un dato, no un adorno; nunca late ni parpadea.", "section": "colors" },
+      { "name": "The Mono Es Dato Rule", "body": "Chivo Mono solo para datos reales: número de índice, URL, rubro/ciudad, rol/año, teléfono, estado de producción, conteos. Nunca para captions, títulos, decoración ni etiquetas inventadas.", "section": "typography" },
+      { "name": "The Sin Kicker Rule", "body": "Ningún heading lleva etiqueta, eyebrow ni numeración de sección arriba. Los números viven en la canaleta de la fila o inline antes del nombre del caso, nunca como sobretítulo.", "section": "typography" },
+      { "name": "The Regla De Tinta Rule", "body": "Cada sección del índice abre con una regla de tinta de 1px a todo el ancho del contenedor; entre filas, hairline #e6e8ec. Sobre papel gris, la regla baja a tinta al 15%.", "section": "layout" },
+      { "name": "The Solo Las Pantallas Flotan Rule", "body": "Filas, chips, pasos y bloques de texto no llevan sombra. Si algo flota, es una captura real o un CTA.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do resolver todo contenido enumerable como filas numeradas con canaleta mono y hairline de borde a borde, abiertas por una regla de tinta de 1px.",
+      "Do usar Chivo Mono solo para datos reales (número, URL, rubro/ciudad, rol/año, teléfono, estado).",
+      "Do mostrar el punto verde estático \"En producción\" solo donde es verdad, y \"Ver ↗\" solo donde existe una URL pública.",
+      "Do reservar el azul #0048FF para el CTA de WhatsApp, los links y la región de cierre entera.",
+      "Do poner capturas reales en los marcos de navegador y celular, con la sombra suave desplazada y su sidecar de procedencia.",
+      "Do escribir captions en Archivo xs (0.75rem) ink-soft.",
+      "Do rellenar de carbón el chip de filtro activo."
+    ],
+    "donts": [
+      "Don't poner kickers, eyebrows ni numeración de sección arriba de los headings.",
+      "Don't armar grillas de cards iguales para servicios o pasos; usar filas o pares dt/dd.",
+      "Don't usar círculos azules numerados para pasos ni íconos decorativos en filas.",
+      "Don't agregar reveals al hacer scroll, puntos que laten ni loops: el único motion es la entrada del hero.",
+      "Don't usar sombras duras u offset sólido; las únicas sombras son las de pantallas y CTA listadas arriba.",
+      "Don't cambiar la paleta pinned ni agregar modo oscuro.",
+      "Don't usar la fuente del sistema en headings."
+    ]
+  }
+}
