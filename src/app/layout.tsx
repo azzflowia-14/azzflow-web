@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Chivo_Mono } from "next/font/google";
 import "./globals.css";
+import { Movimiento } from "@/components/movimiento";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={`${archivo.variable} ${chivoMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Movimiento>{children}</Movimiento>
+      </body>
     </html>
   );
 }

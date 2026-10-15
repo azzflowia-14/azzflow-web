@@ -1,6 +1,9 @@
 import { Nav } from "@/components/nav";
 import { Logo, LogoGlyph } from "@/components/logo";
 import { Reveal } from "@/components/reveal";
+import { FondoHero } from "@/components/fondo-hero";
+import { Aparecer } from "@/components/aparecer";
+import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { Indice } from "@/components/indice";
 import { Navegador, Celular } from "@/components/marcos";
 import { WhatsAppIcon, InstagramIcon, ArrowIcon } from "@/components/icons";
@@ -159,15 +162,22 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden">
+          <FondoHero />
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,var(--line)_1px,transparent_1px),linear-gradient(to_bottom,var(--line)_1px,transparent_1px)] bg-[size:56px_56px] opacity-60 [mask-image:radial-gradient(ellipse_70%_60%_at_70%_40%,#000_20%,transparent_75%)]"
           />
           <div className="relative mx-auto grid w-full max-w-[1200px] items-center gap-14 px-4 pb-14 pt-28 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pb-16 lg:pt-32">
             <div className="lg:col-span-5">
-              <h1 className="text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.035em] text-balance sm:text-6xl lg:text-[4.4rem]">
+              <TextEffect
+                as="h1"
+                per="word"
+                preset="fade-in-blur"
+                speedReveal={1.4}
+                className="text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.035em] text-balance sm:text-6xl lg:text-[4.4rem]"
+              >
                 Tu negocio ya no entra en una planilla.
-              </h1>
+              </TextEffect>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
                 Construimos sistemas de gestión a medida para pymes: personal,
                 stock, entregas, flota, reservas y cobranzas. Reemplazan el
@@ -245,9 +255,9 @@ export default function Home() {
           </div>
 
           <div className="mt-12">
-            <Caso caso={HR} n={1} invertido={false} />
-            <Caso caso={PORTOFINO} n={2} invertido />
-            <Caso caso={GUARDIARIO} n={3} invertido={false} />
+            <Aparecer><Caso caso={HR} n={1} invertido={false} /></Aparecer>
+            <Aparecer><Caso caso={PORTOFINO} n={2} invertido /></Aparecer>
+            <Aparecer><Caso caso={GUARDIARIO} n={3} invertido={false} /></Aparecer>
           </div>
 
           <div className="border-t border-ink pt-16 lg:pt-20">
